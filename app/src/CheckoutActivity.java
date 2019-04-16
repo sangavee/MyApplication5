@@ -13,6 +13,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
     String total_amount;
     TextView totalvalue,payablevalue;
+    String J="hi sangu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
