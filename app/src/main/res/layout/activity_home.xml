@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NavigationActivity"
+    tools:showIn="@layout/app_bar_navigation">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/searchview"
+            android:paddingLeft="@dimen/margin_basic"
+            android:background="@color/white"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/padding_basic"
+            android:padding="5dp"
+            android:hint="@string/search_hint"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/search"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <!--detaild view bar-->
+
+    <android.support.v4.widget.NestedScrollView
+android:layout_below="@id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_above="@id/navigationView"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--first adapter view using viewpager-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardone"
+                android:focusableInTouchMode="true"
+                android:elevation="@dimen/card_view_padding"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="130dp"
+                    app:centered="true"
+                    app:fillColor="#df0623"
+                    app:pageColor="#fff"
+                    app:strokeColor="@color/transparent"
+                    app:snap="false" />
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <!--banner view-->
+
+            <LinearLayout
+                android:layout_below="@id/cardone"
+                android:layout_width="match_parent"
+                android:id="@+id/banerlayout"
+                android:background="@color/white"
+                android:gravity="center"
+android:elevation="@dimen/card_view_padding"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_basic"
+                android:layout_marginRight="@dimen/margin_basic"
+                android:layout_height="@dimen/banner_height">
+
+                <ImageView
+                    android:id="@+id/brand_image"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/image_view_height"
+                    android:src="@drawable/ourbrands"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:id="@+id/yoshna_brand"
+                    android:layout_width="@dimen/image_view_width"
+                    android:layout_height="@dimen/image_view_height"
+                    android:src="@drawable/yoshnas"
+                    android:layout_marginLeft="@dimen/card_view_padding"
+                    android:layout_marginRight="@dimen/card_view_padding"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:id="@+id/oh_pair_brand"
+                    android:layout_width="@dimen/image_view_width"
+                    android:layout_height="@dimen/image_view_height"
+                    android:src="@drawable/ohpair"
+                    android:scaleType="fitXY"/>
+
+            </LinearLayout>
+
+            <!-- recyclerview-->
+
+            <RelativeLayout
+                android:id="@+id/first_recycle_lay"
+                android:background="@color/white"
+                android:layout_below="@id/banerlayout"
+                android:layout_margin="@dimen/margin_basic"
+                android:elevation="@dimen/card_view_padding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/whtsnew"
+                    android:textColor="@color/black"
+                    android:text="What's new?"
+                    android:padding="@dimen/padding_basic"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@id/whtsnew"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:id="@+id/my_recycler_view"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+
+         <!--   second adapter view
+            <android.support.v7.widget.CardView
+                android:elevation="@dimen/card_view_padding"
+                android:layout_below="@+id/first_recycle_lay"
+                android:layout_width="wrap_content"
+                android:id="@+id/l1"
+               android:layout_marginLeft="@dimen/margin_basic"
+                android:layout_marginRight="@dimen/margin_basic"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="130dp"
+                    app:centered="true"
+                    app:fillColor="#df0623"
+                    app:pageColor="#fff"
+                    app:strokeColor="@color/transparent"
+                    app:snap="false" />
+
+            </android.support.v7.widget.CardView>
+-->
+
+            <!--second recycler view-->
+<!--
+            <RelativeLayout
+
+                android:layout_below="@id/l1"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/card_view_padding"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What's new?"
+                    />
+                <android.support.v7.widget.RecyclerView
+android:layout_below="@id/title1"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:id="@+id/my_recycler_view_two"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>-->
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_background"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/navigationView"
+        >
+
+
+    </android.support.design.widget.BottomNavigationView>
+<!--
+<android.support.design.widget.FloatingActionButton
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:id="@+id/cart_floating_btn"
+    android:layout_alignParentEnd="true"
+   android:layout_above="@id/navigation"
+
+    android:layout_margin="@dimen/margin_basic"
+    android:src="@drawable/cart"
+    />-->
+
+</RelativeLayout>

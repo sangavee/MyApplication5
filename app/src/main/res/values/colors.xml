@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a92578</color>
+    <color name="colorPrimaryDark">#7c1255</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="base_background">#eaf1f1</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#f358d60f</color>
+    <color name="gray">#626362</color>
+    <color name="light_gray">#6654</color>
+    <color name="sky_blue">#04acfa</color>
+
+    <color name="oh_colorprimary">#8CCB2E</color>
+    <color name="oh_colorprimaryDark">#7caf30</color>
+    <color name="oh_colorAccent">#D81B60</color>
+
+<color name="orange">#f2420d</color>
+</resources>

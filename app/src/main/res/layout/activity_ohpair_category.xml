@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OhpairCategoryActivity">
+
+    <!--action bar-->
+    <RelativeLayout
+        android:id="@+id/action_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/titles"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/oh_colorprimary"
+            android:gravity="center"
+            android:paddingTop="@dimen/title_top"
+            android:textSize="20dp"
+            android:paddingBottom="@dimen/title_top"
+            android:src="@drawable/ohpair"
+            android:text="@string/ohpair"
+
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_marginRight="@dimen/margin_basic"
+            android:layout_alignParentStart="true"
+            android:id="@+id/back_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:src="@drawable/back_icon"/>
+        <ImageView
+            android:layout_marginRight="@dimen/margin_basic"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/favorite_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:src="@drawable/cart"/>
+    </RelativeLayout>
+
+    <!--banner view-->
+
+    <LinearLayout
+        android:layout_below="@id/action_layout1"
+        android:layout_width="match_parent"
+        android:id="@+id/banerlayout"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/padding_basic"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin_basic"
+        android:layout_marginRight="@dimen/margin_basic"
+        android:layout_height="@dimen/banner_height">
+
+        <ImageView
+            android:id="@+id/brand_image"
+            android:layout_width="@dimen/image_view_width"
+            android:layout_height="@dimen/image_view_height"
+            android:src="@drawable/ourbrands"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/yoshna_brand"
+            android:layout_width="@dimen/image_view_width"
+            android:layout_height="@dimen/image_view_height"
+            android:src="@drawable/yoshnas"
+            android:layout_marginLeft="@dimen/card_view_padding"
+            android:layout_marginRight="@dimen/card_view_padding"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/oh_pair_brand"
+            android:layout_width="@dimen/image_view_width"
+            android:layout_height="@dimen/image_view_height"
+            android:src="@drawable/ohpair"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <!-- recyclerview-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/banerlayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:elevation="@dimen/margin_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>

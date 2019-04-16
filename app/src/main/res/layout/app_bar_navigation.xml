@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/titles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimary"
+android:layout_marginLeft="40dp"
+                    android:paddingTop="@dimen/title_top"
+                    android:src="@drawable/logo1"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:layout_marginRight="@dimen/margin_basic"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/wishlisticon"
+                    android:layout_marginTop="@dimen/margin_basic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/fav_icon"/>
+
+                <ImageView
+                    android:id="@+id/notify_icon"
+                    android:layout_width="20dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="@dimen/icon_image_height"
+                    android:layout_marginTop="@dimen/margin_basic"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@id/wishlisticon"
+                    android:src="@drawable/notification" />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/activity_home" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

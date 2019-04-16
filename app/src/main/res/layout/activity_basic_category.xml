@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicCategoryActivity">
+
+    <!--action bar-->
+    <RelativeLayout
+        android:id="@+id/action_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titles"
+            android:padding="@dimen/title_top"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:text="@string/title_dashboard"/>
+        <ImageView
+            android:layout_marginRight="@dimen/margin_basic"
+            android:layout_alignParentStart="true"
+            android:id="@+id/back_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:src="@drawable/back_icon"/>
+
+        <ImageView
+            android:id="@+id/favorite_icon"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_marginRight="@dimen/margin_basic"
+            android:scaleType="fitXY"
+            android:src="@drawable/cart" />
+    </RelativeLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_below="@+id/action_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+            android:id="@+id/yoshnaimage"
+                android:text="@string/app_name"
+                android:textSize="28dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:padding="@dimen/margin_basic"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/yoshnaimage"
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@+id/oh_pair_brand"
+                android:layout_below="@id/my_recycler_view"
+                android:text="@string/ohpair"
+                android:textSize="28dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="@dimen/margin_basic"
+                android:textColor="@color/black"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/oh_pair_brand"
+                android:id="@+id/my_recycler_view_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

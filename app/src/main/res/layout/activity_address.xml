@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressActivity">
+
+    <!--action layout-->
+    <RelativeLayout
+        android:id="@+id/action_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/title"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/margin_basic"
+            android:text="Address"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginRight="@dimen/margin_basic"
+            android:layout_alignParentStart="true"
+            android:id="@+id/back_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:src="@drawable/back_icon"/>
+
+    </RelativeLayout>
+
+  <!--detail page-->
+<android.support.v7.widget.CardView
+    android:layout_margin="@dimen/margin_basic"
+    android:layout_below="@id/action_layout1"
+    android:layout_width="match_parent"
+    android:layout_above="@id/confirmorder"
+    android:layout_height="wrap_content"
+    tools:ignore="NotSibling">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--address type-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativelayout"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addreestype"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:text="Address type"
+
+                    />
+
+
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:id="@+id/radiogroup"
+                    android:layout_below="@id/addreestype"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:scaleY="0.55"
+                        android:scaleX="0.55"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="Home"
+                        android:id="@+id/home"
+                        android:textSize="24sp"
+                        android:paddingLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:scaleY="0.55"
+                        android:scaleX="0.55"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="Work"
+                        android:id="@+id/work"
+                        android:textSize="24sp"
+                        android:paddingLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <!--pincode-->
+            <EditText
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/pincode"
+                android:inputType="number"
+                android:maxLines="1"
+                android:hint="Pincode"
+                android:textSize="15dp"
+                android:gravity="top"
+                android:background="@drawable/edittext_bottom_line"
+
+                />
+
+            <!--city & state design-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/center"/>
+                <!--city-->
+                <EditText
+                    android:layout_margin="@dimen/margin_basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:id="@+id/city"
+                    android:layout_toLeftOf="@id/center"
+                    android:layout_alignParentStart="true"
+                    android:hint="City"
+                    android:textSize="15dp"
+                    android:maxLines="1"
+                    android:inputType="textCapSentences"
+                    android:gravity="top"
+                    android:background="@drawable/edittext_bottom_line"
+                    />
+                <!--state-->
+                <EditText
+                    android:layout_margin="@dimen/margin_basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:id="@+id/state"
+                    android:layout_toRightOf="@id/center"
+                    android:layout_alignParentEnd="true"
+                    android:hint="State"
+                    android:textSize="15dp"
+                    android:gravity="top"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_bottom_line"
+
+                    />
+
+            </RelativeLayout>
+            <!--area-->
+            <EditText
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:maxLines="1"
+                android:id="@+id/area"
+                android:hint="Area"
+                android:inputType="textCapSentences"
+                android:textSize="15dp"
+                android:gravity="top"
+                android:background="@drawable/edittext_bottom_line"
+
+                />
+
+            <!--address-->
+            <EditText
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/address"
+                android:hint="Address"
+                android:textSize="15dp"
+                android:maxLines="3"
+                android:inputType="textCapSentences"
+                android:gravity="top"
+                android:background="@drawable/edittext_bottom_line"
+                />
+            <!--landmark-->
+            <EditText
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/landmark"
+                android:hint="Landmark (optional)"
+                android:textSize="15dp"
+                android:gravity="top"
+                android:maxLines="1"
+                android:inputType="textCapSentences"
+                android:background="@drawable/edittext_bottom_line"
+                />
+            <!--alternate no-->
+            <EditText
+                android:layout_margin="@dimen/margin_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/alternateno"
+                android:hint="Alternate No"
+                android:textSize="15dp"
+                android:gravity="top"
+                android:inputType="number"
+                android:maxLines="1"
+                android:background="@drawable/edittext_bottom_line"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirmorder"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="@dimen/margin_basic"
+                android:layout_marginLeft="@dimen/margin_basic"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:text="Save Address"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v7.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

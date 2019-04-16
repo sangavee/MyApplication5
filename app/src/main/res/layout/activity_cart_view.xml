@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartViewActivity">
+
+
+    <!--action layout-->
+    <RelativeLayout
+        android:id="@+id/action_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/title"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/margin_basic"
+            android:text="Cart"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginRight="@dimen/margin_basic"
+            android:layout_alignParentStart="true"
+            android:id="@+id/back_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:src="@drawable/back_icon"/>
+
+    </RelativeLayout>
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@id/action_layout1"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_below="@id/action_layout1"
+        android:layout_margin="4dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/my_recycler_view"
+            android:layout_above="@id/bottomlayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amountvalue"
+            android:text="0"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/my_recycler_view"
+            android:layout_marginTop="40dp"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/inr2"
+            android:layout_marginLeft="@dimen/margin_basic"
+            android:layout_centerVertical="true"
+            android:src="@drawable/inr_icon"
+            android:layout_marginTop="43dp"
+            android:layout_below="@id/my_recycler_view"
+            android:layout_toLeftOf="@id/amountvalue"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/inr2"
+            android:text="Total"
+            android:id="@+id/totaltxtt"
+            android:textSize="22dp"
+            android:layout_below="@id/my_recycler_view"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right_aero"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/checkout_border"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/checkout"
+            android:text="Checkout       "
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:padding="@dimen/margin_basic"
+            android:layout_below="@id/totaltxtt"/>
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

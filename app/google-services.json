@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "906550659592",
+    "firebase_url": "https://sampleproject-3234c.firebaseio.com",
+    "project_id": "sampleproject-3234c",
+    "storage_bucket": "sampleproject-3234c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906550659592:android:e2aedd0904f6a34c",
+        "android_client_info": {
+          "package_name": "com.yoho.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906550659592-n2ingq8i5dusn6dk6fmdkcl5mmvfm8la.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr0MfX0_6VwCQ6n6wYCFlQfmhELFq1l_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906550659592-n2ingq8i5dusn6dk6fmdkcl5mmvfm8la.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

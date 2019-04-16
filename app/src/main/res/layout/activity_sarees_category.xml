@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".SareesCategoryActivity">
+    <!--action bar-->
+    <RelativeLayout
+        android:id="@+id/action_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingTop="@dimen/title_top"
+            android:paddingBottom="@dimen/title_top"
+
+            android:text="@string/saree_title"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="normal" />
+        <ImageView
+            android:layout_marginRight="@dimen/margin_basic"
+            android:layout_alignParentStart="true"
+            android:id="@+id/back_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:src="@drawable/back_icon"/>
+
+        <ImageView
+            android:id="@+id/cart_icon"
+            android:layout_width="@dimen/icon_image_width"
+            android:layout_height="@dimen/icon_image_height"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_basic"
+            android:layout_marginRight="@dimen/margin_basic"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+    <!--sorting layout-->
+    <RelativeLayout
+        android:id="@+id/sorting_layout"
+        android:padding="@dimen/margin_basic"
+        android:background="@color/white"
+        android:layout_below="@id/action_layout1"
+        android:layout_margin="@dimen/margin_basic"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/padding_basic"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/margin_basic"
+            android:id="@+id/sortingimage"
+            android:src="@drawable/sorting"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortingtext"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sortingimage"
+            android:text="@string/sorting_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/producttext"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+       android:layout_alignParentEnd="true"
+            android:text="@string/product_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/productcount"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+           android:layout_toLeftOf="@id/producttext"
+            android:textSize="18dp"
+            android:text="10"/>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/sorting_layout"
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_basic"
+
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

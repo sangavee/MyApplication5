@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:padding="40dp"
+    tools:context=".SortingDialogeFragment">
+
+
+    <TextView
+        android:id="@+id/sort"
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort"/>
+
+<RadioGroup
+    android:layout_below="@id/sort"
+    android:layout_marginTop="20dp"
+    android:id="@+id/radiogroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <!-- <RadioButton
+        android:padding="@dimen/margin_basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/relavence"
+        android:id="@+id/relavance"
+       android:buttonTint="@color/colorPrimary"
+        />
+    <RadioButton
+        android:padding="@dimen/margin_basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popularity"
+        android:id="@+id/popularity"
+        android:buttonTint="@color/colorPrimary"
+        />-->
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_Low"
+        android:padding="@dimen/margin_basic"
+        android:id="@+id/Pricelowtohigh"
+        android:buttonTint="@color/colorPrimary"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_High"
+        android:padding="@dimen/margin_basic"
+        android:id="@+id/pricehightolow"
+        android:buttonTint="@color/colorPrimary"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sort_by_name"
+        android:padding="@dimen/margin_basic"
+        android:id="@+id/sortbyname"
+        android:buttonTint="@color/colorPrimary"
+        />
+     <RadioButton
+        android:padding="@dimen/margin_basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sort_by_name_desc"
+        android:id="@+id/desc"
+       android:buttonTint="@color/colorPrimary"
+        />
+</RadioGroup>
+
+    <TextView
+        android:layout_below="@id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finish"
+        android:textStyle="normal"
+        android:layout_marginTop="20dp"
+        android:id="@+id/finish"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:layout_alignParentEnd="true"
+
+        />
+
+
+</RelativeLayout>

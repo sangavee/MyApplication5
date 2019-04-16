@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:layout_marginTop="@dimen/margin_basic"
+        android:id="@+id/overviewimage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:src="@drawable/saree4"
+        android:layout_height="200dp" />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/discount"
+        android:background="@drawable/radiousborder"
+        android:layout_centerVertical="true"
+        android:text="@string/discount"
+        android:textColor="@color/white"
+        android:padding="@dimen/margin_basic"
+        />
+-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id"
+      android:visibility="gone"
+        android:padding="@dimen/margin_basic"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/productname"
+        android:padding="@dimen/margin_basic"
+        android:layout_below="@id/overviewimage"
+        android:text="@string/productname"
+        android:maxLines="1"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:id="@+id/line"
+        android:layout_below="@id/productname"
+       />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/inr"
+        android:layout_marginLeft="@dimen/margin_basic"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/inr_icon"
+        android:layout_below="@id/line"
+        />
+
+    <TextView
+        android:id="@+id/first_price"
+        android:text="@string/price"
+        android:layout_below="@id/line"
+        android:layout_toRightOf="@id/inr"
+        android:layout_marginTop="@dimen/margin_basic"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/inr2"
+        android:layout_marginLeft="@dimen/margin_basic"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/inr_icon"
+        android:layout_toRightOf="@id/first_price"
+        android:layout_below="@id/line"
+        />
+
+    <TextView
+        android:id="@+id/second_price"
+        android:text="@string/price_strike"
+        android:layout_toEndOf="@id/inr2"
+        android:layout_below="@id/line"
+        android:layout_marginTop="@dimen/margin_basic"
+        android:textColor="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/line"
+        android:background="@color/colorPrimary"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        android:padding="@dimen/margin_basic"
+        android:layout_margin="@dimen/margin_basic"
+        />
+</RelativeLayout>

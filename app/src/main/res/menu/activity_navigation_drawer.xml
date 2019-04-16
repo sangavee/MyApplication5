@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+<item android:title="General">
+    <menu>
+
+        <group android:checkableBehavior="single"
+            >
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/home_icon"
+                android:title="Home" />
+            <item
+                android:id="@+id/category"
+                android:icon="@drawable/category"
+
+                android:title="Shop by Category" />
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/categories"
+                android:title="Profile" />
+            <item
+                android:id="@+id/MyOrders"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Your Orders" />
+            <item
+                android:id="@+id/Wishlist"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Your Wish List" />
+
+            <item
+                android:id="@+id/NNotofication"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Your Notification" />
+
+
+        </group>
+
+    </menu>
+
+</item>
+
+<item android:title="Communicate">
+    <menu>
+        <group
+
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/terms"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Terms  &#38; Condition" />
+            <item
+                android:id="@+id/aboutus"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="About Us" />
+            <item
+                android:id="@+id/contactus"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Contact Us" />
+
+
+        </group>
+
+    </menu>
+</item>
+
+    <item
+        android:id="@+id/Logout"
+        android:visible="false"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Logout" />
+
+</menu>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--order id-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orderid"
+                android:text="Order Id :"
+                android:padding="@dimen/padding_basic"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ord"
+                android:text="ORD"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/orderid"
+                android:paddingTop="@dimen/padding_basic"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orderidvalue"
+                android:text="0098"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/ord"
+                android:paddingTop="@dimen/padding_basic"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/productid"
+                android:layout_alignParentEnd="true"
+                android:text="0098"
+                android:textColor="@color/black"
+              android:visibility="gone"
+                android:paddingTop="@dimen/padding_basic"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_basic"
+            android:id="@+id/dateandtime"
+            android:text="2019-02-19: 13:17:56"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_basic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/overviewimage"
+                android:src="@drawable/pro2"
+                android:layout_width="75dp"
+                android:layout_height="75dp" />
+            <RelativeLayout
+                android:layout_marginLeft="5dp"
+                android:padding="@dimen/margin_basic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productname"
+                    android:textColor="@color/black"
+                    android:text="Cotton Designer Saree"/>
+
+                <TextView
+                    android:background="@drawable/textview_border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="View Order"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="@dimen/card_view_padding"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
